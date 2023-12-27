@@ -44,12 +44,6 @@ $ cd timelens
 # Install dependencies
 $ npm install
 
-    This endpoint starts the temperature monitoring for the specified location and desired temperature range.
-
-**Notes**
-- Ensure that the server is running when you want to monitor the temperature.
-- The temperature is checked every 15 minutes as per the agent's configuration.
-- SMS notifications will be sent when the temperature is below the desired_min_temp or above the desired_max_temp.
 
 **Contributing**
 - If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
