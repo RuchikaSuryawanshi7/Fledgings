@@ -1,88 +1,49 @@
-# Temperature Monitoring Server
+# TimeLens - Your Personal Time Management Assistant
 
-### Overview
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-This Python server application utilizes Flask, a lightweight WSGI web application framework, to monitor the temperature of a specified location and notify the user via SMS if the temperature goes above or below the desired range. The application uses the OpenWeatherMap API to retrieve the current temperature and the Sinch API to send SMS notifications. It also employs an agent-based approach using the `uagents` library to periodically check the temperature and send notifications.
+## Overview
 
-### Prerequisites
+In a world where time is both our most precious and elusive resource, TimeLens emerges as the beacon of productivity. 🚀 Imagine a virtual assistant that not only comprehends your every scheduling need but intuitively orchestrates a symphony of productivity tailored uniquely for you. Welcome to TimeLens – the gateway to unlocking your full potential through seamless time management, intelligent task handling, and personalized productivity elevation.
 
-- Python 3.8+
-- A Sinch API account for sending SMS
-- An OpenWeatherMap API key for fetching weather data
+## Problem Statement
 
-### Dependencies
+Time is a priceless asset, and navigating the complexities of a busy schedule can be overwhelming. Inefficient task management missed appointments, and lack of personalized strategies often hinder productivity. TimeLens aims to address these challenges by providing a smart, adaptable, and user-centric time management assistant.
 
-The following Python packages are required to run the server:
+## Elevator Pitch
 
-- Flask
-- requests
-- uagents
-- flask_cors
-- asyncio
-- threading
+TimeLens is not just a scheduler; it's your intelligent companion in the journey of mastering time. It revolutionizes personal productivity with features like dynamic task scheduling, proactive calendar reviews, traffic and weather-aware alerts, email management, and even motivational nudges. As you interact with TimeLens, it learns and adapts to your preferences, ensuring a tailored and efficient workflow.
 
-### Installation
+## Table of Contents
 
-1. **Clone the Repository**
+1. [Installation](#installation)
+2. [Usage](#usage)
+   - [Task Scheduling](#task-scheduling)
+   - [To-Do Lists](#to-do-lists)
+   - [Calendar Review](#calendar-review)
+   - [Traffic and Weather Alerts](#traffic-and-weather-alerts)
+   - [Email and Search](#email-and-search)
+   - [Motivational Reminders](#motivational-reminders)
+   - [Learning and Adaptation](#learning-and-adaptation)
+   - [Music Playback](#music-playback)
+3. [Configuration](#configuration)
+4. [Contributing](#contributing)
+5. [License](#license)
 
-   ```
-   git clone https://github.com/RuchikaSuryawanshi7/HackAI-Fledglings.git
-   cd flask_backend 
-   ```
-2. **Set Up a Virtual Environment (Optional)**
-   ```
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+## Installation
 
-3. **Install Dependencies**
-   ```
-   pip install Flask requests uagents flask_cors asyncio threading
-   ```
+To experience the power of TimeLens, follow these simple steps:
 
-4. **Configure API Keys**
+```bash
+# Clone the TimeLens repository
+$ git clone [https://github.com/yourusername/timelens.git](https://github.com/RuchikaSuryawanshi7/Fledgings)
 
-    Replace the placeholder API keys and tokens in the code with your actual keys.
+# Navigate to the TimeLens directory
+$ cd timelens
 
-    OpenWeatherMap API key: Replace the appid parameter in the URL in the start_monitoring function.
-    ```
-    url = f'https://api.openweathermap.org/data/2.5/weather?q {selected_location}&appid=ENTER_API_KEY_HERE'
-    ```
+# Install dependencies
+$ npm install
 
-    Sinch API: Replace servicePlanId and apiToken in the notify_userSMS function.
-    ```
-    servicePlanId = "enter string here"
-    apiToken = "enter string here"
-    ```
-
-5. **Configure Phone Numbers**
-
-    Replace the sinchNumber and toNumber in the notify_userSMS function with the actual numbers.
-    ```
-    sinchNumber = "enter number here without country code"
-    toNumber = "enter number here without country code"
-    ```
-
-### Usage
-
-1. **Start the Server**
-    Run the server using the following command:
-    ```
-    python server.py
-    ```
-    The server will start on port 5001
-
-2. **API Endpoints**
-    Endpoint: /start_monitoring
-    Method: POST
-    Payload Example:
-    ```json
-    {
-        "selected_location": "Pune",
-        "desired_min_temp": 20,
-        "desired_max_temp": 30
-    }
-    ```
     This endpoint starts the temperature monitoring for the specified location and desired temperature range.
 
 **Notes**
