@@ -1,12 +1,13 @@
 .main {
     font-family: "Poppins", sans-serif;
-    width: 23vw;
+    width: 90vw;
     height: 12vw;
     background-color: rgba(0, 0, 0, 0.233);
     border-radius: 2vw;
     padding: 1vw .5vw 1vw 1.5vw;
     color: rgba(255, 255, 255, 0.564);
     font-size: 1.1vw;
+    margin-left: 4vw;
     margin-bottom: 1.5vw;
 }
 

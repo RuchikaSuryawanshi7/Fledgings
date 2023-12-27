@@ -142,3 +142,7 @@ button {
     height: 40vw;
     overflow-y: scroll;
 }
+
+.list::-webkit-scrollbar {
+    display: none;
+}
