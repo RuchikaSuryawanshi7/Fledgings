@@ -36,7 +36,7 @@ To experience the power of TimeLens, follow these simple steps:
 
 ```bash
 # Clone the TimeLens repository
-$ git clone [https://github.com/yourusername/timelens.git](https://github.com/RuchikaSuryawanshi7/Fledgings)
+$ git clone (https://github.com/RuchikaSuryawanshi7/Fledgings)
 
 # Navigate to the TimeLens directory
 $ cd timelens
